@@ -17,7 +17,7 @@ import java.io.File;
 import java.io.IOException;
 
 import static java.lang.Thread.*;
-import static org.epam.testing.LoginTest.myPersonalDriver;
+import static org.epam.testing.MainBookingPageTest.myPersonalDriver;
 
 /**
  * Created by AlexSh on 27.10.2016.

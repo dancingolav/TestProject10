@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 
 
 
-public class RadioButtonsData {
+public class DateData {
       @DataProvider(name="radiobuttons")
        public static Object [][] createDataForRadioButtons() {
            return new Object[][] {
