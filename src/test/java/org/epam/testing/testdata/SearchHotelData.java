@@ -24,7 +24,9 @@ public class SearchHotelData {
                    { true, "", "Слима"},
                    { true, "", "Сент-Джулианс"},
                    { false, "", ""},
-                   { true, "gjhgjjhgjhgjhgjh", "Валетта"},
+                   { false, "dgdsgdgdfgsgdfsgdsgdsfg", ""},
+                   { true, "gjhgjjhgjhgjhgjh", "Валетта"}
+
 
            };
 

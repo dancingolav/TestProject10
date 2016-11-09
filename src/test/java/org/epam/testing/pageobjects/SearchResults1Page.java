@@ -3,6 +3,7 @@ package org.epam.testing.pageobjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,12 +14,8 @@ public class SearchResults1Page {
 
     private String mainResults1PageUrl;
 
-    @FindBy(xpath="//h1/span[@class='sr-dest__type'][contains(.,'Регион')]")
-    private WebElement hotelsFoundInRegion;
-
-    @FindBy(xpath="//h1/span[@class='sr-dest__type'][contains(.,'Город')]")
-    private WebElement hotelsFoundInTown;
-
+    @FindBy(xpath="*//h1[contains(normalize-space(.),'найден') and contains(normalize-space(.),'вариант')]")
+    private WebElement hotelsFoundInRegionOrTown;
 
 
     private WebDriver driverHere;
@@ -26,24 +23,22 @@ public class SearchResults1Page {
 
     public SearchResults1Page(WebDriver driver ) {
         this.driverHere = driver;
+        PageFactory.initElements(this.driverHere, this);
         this.mainResults1PageUrl = driver.getCurrentUrl();
-    }
-
-
-    public void open() {
-
+        System.out.println(this.mainResults1PageUrl);
         driverHere.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driverHere.manage().window().maximize();
+
     }
 
-    public WebElement getHotelsFoundInRegion() { return hotelsFoundInRegion;}
-    public WebElement getHotelsFoundInTown() { return hotelsFoundInTown;}
+
+
+    public WebElement getHotelsFoundInRegionOrTown() { return hotelsFoundInRegionOrTown;}
+
 
     public String getInfoString () {
-        if (hotelsFoundInRegion != null) return hotelsFoundInRegion.getText();
-        if (hotelsFoundInTown != null) return hotelsFoundInTown.getText();
-
-        return "this is a wrong page";
+        if (hotelsFoundInRegionOrTown != null) return hotelsFoundInRegionOrTown.getText();
+           return " ";
 
     }
 

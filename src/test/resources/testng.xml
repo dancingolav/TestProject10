@@ -41,7 +41,7 @@
     <parameter name="pathToDriver"  value="D:/PersonalDrivers/chromedriver.exe"/>
 
 
-    <test name="LoginTest">
+    <test name="MainBookingPageTest">
         <classes>
             <class name= "org.epam.testing.MainBookingPageTest" />
         </classes>
@@ -49,11 +49,11 @@
 
 
 
-    <test name="DifferentElementsPage">
+   <!-- <test name="DifferentElementsPage">
         <classes>
             <class name= "org.epam.testing.DifferenElementsTests" />
         </classes>
-    </test>
+    </test>-->
 
 </suite>
 
