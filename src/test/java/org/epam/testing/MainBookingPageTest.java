@@ -119,9 +119,9 @@ public class MainBookingPageTest {
 
     @AfterSuite
     public void afterSuite() {
-      /*  //Close the driver
+
         myPersonalDriver.close();
-        myPersonalDriver.quit();*/
+        myPersonalDriver.quit();
 
     }
 
